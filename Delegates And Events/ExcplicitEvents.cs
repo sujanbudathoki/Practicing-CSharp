@@ -113,6 +113,7 @@ namespace ConsoleApp1.Delegates_And_Events
             sender.MyInt = 2;
             //subscribing function to beforeintchanged event.
             sender.BeforeIntChanged += reciever.BeforeChanged;
+            //subscribing functiion to afterintchanged event.
             sender.AfterIntChanged += reciever.AfterChanged;
             //changing value
             sender.MyInt = 3;
