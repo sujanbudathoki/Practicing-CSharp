@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace ConsoleApp1.Delegates_And_Events
@@ -44,15 +45,22 @@ namespace ConsoleApp1.Delegates_And_Events
             {
                 JobEvent eventObj = new JobEvent();
                 eventObj.JobNo = myInt;
-                myEvent(this,eventObj );
+                myEvent(this, eventObj);
             }
         }
     }
+
+  
     public class Reciever
     {
         public void getNotification(object sender, JobEvent e)
         {
             Console.WriteLine("Integer Value Has Been Changed to {0}",e.JobNo);
+        }
+
+        private string GetDebuggerDisplay()
+        {
+            return ToString();
         }
     }
 
